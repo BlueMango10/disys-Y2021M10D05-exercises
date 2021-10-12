@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package time;
+option go_package = "https://github.com/BlueMango10/disys-Y2021M10D05-exercises;time";
+
+service TimeService {
+	rpc GetCurrentTime (Empty) returns (Time) {}
+}
+
+message Empty {}
+
+message Time {
+	optional int32 seconds = 1;
+	optional int32 minutes = 2;
+	optional int32 hours = 3;
+}
